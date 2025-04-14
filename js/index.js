@@ -29,10 +29,20 @@ let fruits = JSON.parse(fruitsJSON);
 const display = () => {
   // TODO: очищаем fruitsList от вложенных элементов,
   // чтобы заполнить актуальными данными из fruits
-
+  let removeAllChildren = (fruitsList) => {
+  while (fruitsList.firstChild) {
+    fruitslist.removeChild (fruitsList.firstChild);
+    }  
+  }
+  let newChild = (fruitsList, fruits) => {
   for (let i = 0; i < fruits.length; i++) {
     // TODO: формируем новый элемент <li> при помощи document.createElement,
     // и добавляем в конец списка fruitsList при помощи document.appendChild
+    let newLi = document.createElement("li");
+    newLi.innerElement = fruits;
+    let addFruit = fruitsList;
+    addFruit.appendChild(newli);
+    }	  
   }
 };
 
