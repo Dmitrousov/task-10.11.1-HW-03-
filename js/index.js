@@ -33,21 +33,17 @@ const display = () => {
   while (fruitsList.firstChild) {
     fruitsList.removeChild (fruitsList.firstChild);
     }  
-  }
-  let newChild = (fruitsList, fruits) => {
+  };
+  removeAllChildren(fruitsList);
+  let newFruit = (fruitsList, fruits) => {
   let newLi = document.createElement("li");
-  let addFruit = fruitsList;
   for (let i = 0; i < fruits.length; i++) {
     // TODO: формируем новый элемент <li> при помощи document.createElement,
     // и добавляем в конец списка fruitsList при помощи document.appendChild
-    
-    newLi.innerElement = ${fruits[i].kind};
-    newLi.innerElement = ${fruits[i].color};
-    newLi.innerElement = ${fruits[i].weight};
-    
-    addFruit.appendChild(newLi);
+    fruitsList.appendChild(newLi);
     }	  
-  }
+  };
+  newFruit();
 };
 
 // первая отрисовка карточек
